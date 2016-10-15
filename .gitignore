@@ -63,5 +63,5 @@ target/
 # Visual Studio Code
 .vscode**
 
-# Project excluive files
-# PyTree.png
+# Project exclusive files
+PyTree.png
