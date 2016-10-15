@@ -43,22 +43,38 @@ def tree(xstart: float,  # The x co-ordinate for the start of the line
     # If we haven't looped to the limit ...
     if depth > 0:
         # Get the end location of the lines
-        xend = xstart + int(math.cos(math.radians(angle)) * depth * LENGTHFACTOR)
-        yend = ystart + int(math.sin(math.radians(angle)) * depth * LENGTHFACTOR)
+        xend = xstart + int(math.cos(math.radians(angle)) *
+                            depth * LENGTHFACTOR)
+        yend = ystart + int(math.sin(math.radians(angle)) *
+                            depth * LENGTHFACTOR)
         # Get decimals for to draw based on how far in we are
-        (reddec, greendec, bluedec) = colorsys.hsv_to_rgb(float(depth) / MAXDEPTH, 1.0, 1.0)
+        (reddec, greendec, bluedec) = colorsys.hsv_to_rgb(float(depth) /
+                                                          MAXDEPTH, 1.0, 1.0)
         # Turn them into RGB to draw
         # Yes, I know that rgb is 256 for red.
         # Red makes people angry so I want less of that.
-        redhex, greenhex, bluehex = int(200 * reddec), int(255 * greendec), int(255 * bluedec)
+        redhex, greenhex, bluehex = int(200 * reddec),\
+                                    int(255 * greendec),\
+                                    int(255 * bluedec)
         # Actually draw
-        DRAW.line([xstart, ystart, xend, yend], (redhex, greenhex, bluehex), depth)
+        DRAW.line([xstart, ystart, xend, yend],
+                  (redhex, greenhex, bluehex),
+                  depth)
         # Draw the two that branch out from the end of that line.
-        tree(xend, yend, angle - SPREAD, depth - 1)
-        tree(xend, yend, angle + SPREAD, depth - 1)
+        tree(xend,
+             yend,
+             angle - SPREAD,
+             depth - 1)
+        tree(xend,
+             yend,
+             angle + SPREAD,
+             depth - 1)
 
 
 # Start drawing!
-tree(WIDTH / 2, HEIGHT, -90, MAXDEPTH)
+tree(WIDTH / 2,
+     HEIGHT,
+     -90,
+     MAXDEPTH)
 TREEFILE = TREEFILE.resize((1000, 1000), Image.ANTIALIAS)
 TREEFILE.save("PyTree.png", "PNG")
