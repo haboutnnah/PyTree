@@ -1,0 +1,31 @@
+### Sets default
+* text=auto
+
+### Sets text files
+## Git files
+.gitignore text eol=crlf
+.gitattributes text eol=crlf
+## Python
+*.py text eol=crlf
+## Markdown
+*.md text eol=crlf
+## Text Editor Configs
+# Global
+.editorconfig text eol=crlf
+# Sublime
+*.sublime-project text eol=crlf
+# JetBrains
+*.xml text eol=crlf
+*.iml text eol=crlf
+## Text
+*.txt text eol=lf
+## Continuous integration
+# Travis
+travis text eol=lf
+.travis.yml text eol=lf
+# CodeClimate
+.codeclimate.yml text eol=lf
+
+### Binaries
+## Graphics
+.png binary
