@@ -10,8 +10,6 @@ https://github.com/tf2manu994/PyTree
 import colorsys
 import math
 from PIL import Image, ImageDraw
-from typing import Iterator
-
 __author__ = "Manmeet Gill"
 __contact__ = "contact@manmeetgill.com"
 __website__ = "https://manmeetgill.com"
@@ -37,11 +35,11 @@ TREEFILE = Image.new('RGB', (WIDTH, HEIGHT))
 DRAW = ImageDraw.Draw(TREEFILE)
 
 
-def tree(xstart: int,  # The x co-ordinate for the start of the line
-         ystart: int,  # The y co-ordinate for the start of the line
+def tree(xstart: float,  # The x co-ordinate for the start of the line
+         ystart: float,  # The y co-ordinate for the start of the line
          angle: int,  # the angle to branch out, in radians
          depth: int  # How far we have to go
-        ) -> Iterator[int]:
+        ):
     # If we haven't looped to the limit ...
     if depth > 0:
         # Get the end location of the lines
