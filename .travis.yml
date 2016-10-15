@@ -1,0 +1,29 @@
+language: python
+
+python:
+  - "3.5"
+
+# Command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install pep8
+  - pip install pylint
+
+# Allows the script to run
+
+before_script:
+  - chmod +x ./travis
+
+# Command to run tests
+script: 
+  - ./travis
+
+# Routes you to container infrastructure for faster building
+sudo:
+  - false
+
+addons:
+  code_climate:
+    repo_token: 
+      # PEP8 would yell at me for this
+      secure: #TODO: add the secure token for codeclimate

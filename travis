@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Terminate script if there is an error
+
+set -e
+
+# Compiles all python to check syntax
+pep8 --show-source --show-pep8 PyTree.py
+pylint PyTree.py
