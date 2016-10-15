@@ -33,8 +33,8 @@ def tree(x1: int,  # The x co-ordinate for the start of the line
         # Get decimals for to draw based on how far in we are
         (r, g, b) = colorsys.hsv_to_rgb(float(depth) / MAXDEPTH, 1.0, 1.0)
         # Turn them into RGB to draw
-            # Yes, I know that rgb is 256 for red.
-            # Red makes people angry so I want less of that.
+        # Yes, I know that rgb is 256 for red.
+        # Red makes people angry so I want less of that.
         red, green, blue = int(200 * r), int(255 * g), int(255 * b)
         # Actually draw
         draw.line([x1, y1, x2, y2], (red, green, blue), depth)
