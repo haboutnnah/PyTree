@@ -1,29 +1,17 @@
 language: python
-
 python:
-  - "3.5"
-
-# Command to install dependencies
+- '3.5'
 install:
-  - pip install -r requirements.txt
-  - pip install pep8
-  - pip install pylint
-
-# Allows the script to run
-
+- pip install -r requirements.txt
+- pip install pep8
+- pip install pylint
 before_script:
-  - chmod +x ./travis
-
-# Command to run tests
-script: 
-  - ./travis
-
-# Routes you to container infrastructure for faster building
+- chmod +x ./travis
+script:
+- "./travis"
 sudo:
-  - false
-
+- false
 addons:
   code_climate:
-    repo_token: 
-      # PEP8 would yell at me for this
-      secure: #TODO: add the secure token for codeclimate
+    repo_token:
+      secure: "cAOgxRn1SYKbQGVfE36jq2jLOHh8HvmJT1G5oU6aJhg/PaClfIRgj9xDW9ZISzXyhhtOOBsKcnBQE68gJhiWUBf1PG90n1+RyHNg/Dnx/esWPU2eYUZgBLl7Sx0Fvp9vhAE8fFJuOyEHPzEd3UKBS/NJ+h9LjP3lq4iuzDA11BloFoXWn2OjWKzhey6vYScs8s5B/M7yiedAV3BDSOEL8DgLWCoeAMiT1vYhU4t9bx6FHCbF/BN2x9NQU/AvMue/FVjPzhhXCQb04SSLtCljyyOwhcfTB0jWMKQ/ZdC6xHs+f1TGdAjvVZG9E0E+h9Bu87hDzYhNA0tgXc8hCJMPulIrfCf+4pT05183tIxF7TEpElo8o1jUVJ1JidKXtUjJ9yqgKAX6wZlxsBfkMOxcRJwZEgdTanvMJJKsAAdvgHEI88kzr36Zd/PlsvKn999cOvu3fiNvV7IGiCsXhiUXOBmhc4cgBXKuv32OEMkIfSu+9Ess/cJ97V/gg58SAG1d/TmYt8nQ2NZwBdSgFEmv+wuOtbUnsqoSL92frlSjdWzJyMLWohvgjMIhm/NWOjwQjvjkHxJ4/vOo8UUHdM4pMlAvRWZMl4YW1/8rD8ttuuq2y1G70TQ0pCjJ92n8zxUHv1U/S1CmNYOq4AJsONDk+2zm7QMZxuxLkJH8UEVzJnA="
