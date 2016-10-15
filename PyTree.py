@@ -35,11 +35,16 @@ TREEFILE = Image.new('RGB', (WIDTH, HEIGHT))
 DRAW = ImageDraw.Draw(TREEFILE)
 
 
-def tree(xstart: float,  # The x co-ordinate for the start of the line
-         ystart: float,  # The y co-ordinate for the start of the line
-         angle: int,  # the angle to branch out, in radians
-         depth: int  # How far we have to go
-         ):
+def tree(
+        xstart: float,  # The x co-ordinate for the start of the line
+        ystart: float,  # The y co-ordinate for the start of the line
+        angle: int,  # the angle to branch out, in radians
+        depth: int  # How far we have to go
+):
+
+    """
+    :rtype: void
+    """
     # If we haven't looped to the limit ...
     if depth > 0:
         # Get the end location of the lines
@@ -62,14 +67,18 @@ def tree(xstart: float,  # The x co-ordinate for the start of the line
                   (redhex, greenhex, bluehex),
                   depth)
         # Draw the two that branch out from the end of that line.
-        tree(xend,
-             yend,
-             angle - SPREAD,
-             depth - 1)
-        tree(xend,
-             yend,
-             angle + SPREAD,
-             depth - 1)
+        tree(
+            xend,
+            yend,
+            angle - SPREAD,
+            depth - 1
+        )
+        tree(
+            xend,
+            yend,
+            angle + SPREAD,
+            depth - 1
+        )
 
 
 # Start drawing!
