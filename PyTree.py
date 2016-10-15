@@ -1,6 +1,23 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+PyTree v0.1 by Manmeet Gill
+© Manmeet Gill 2016
+https://manmeetgill.com
+contact@manmeetgill.com
+https://github.com/tf2manu994/PyTree
+"""
 import colorsys
 import math
 from PIL import Image, ImageDraw
+from typing import Iterator
+
+__author__ = "Manmeet Gill"
+__contact__ = "contact@manmeetgill.com"
+__website__ = "https://manmeetgill.com"
+__script__ = "PyHDDKeepAlive"
+__version__ = "v0.1"
+__git__ = "https://github.com/tf2manu994/PyTree"
 
 # Set variables
 # TODO: make these set by command line arguments
