@@ -3,7 +3,7 @@
 
 set -e
 
-"\e[36m Running PEP8...\e[0m"
+echo -e "\e[36m Running PEP8...\e[0m"
 pep8 --show-source --show-pep8 PyTree.py
-"\e[36m Running PyLint...\e[0m"
+echo -e "\e[36m Running PyLint...\e[0m"
 pylint PyTree.py
