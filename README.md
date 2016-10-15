@@ -18,5 +18,7 @@ Command line flags!
 
 ### Misc
 
-I'm not going to link this on my website because it's a bit of an odd side project.  
-I'll try and help you if you ask, but I won't add many features other than what's in coming soon.
+This is a bit of an odd side project that I'm only going to use a handful of times.  
+I'll try and help you with it if you ask.  
+I won't add any features other than what's in coming soon.  
+I'm not going to link this on my website.
