@@ -41,7 +41,7 @@ def tree(xstart: int,  # The x co-ordinate for the start of the line
          ystart: int,  # The y co-ordinate for the start of the line
          angle: int,  # the angle to branch out, in radians
          depth: int  # How far we have to go
-         ) -> int:
+        ) -> Iterator[int]:
     # If we haven't looped to the limit ...
     if depth > 0:
         # Get the end location of the lines
