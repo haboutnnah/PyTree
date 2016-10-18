@@ -30,6 +30,7 @@ MAXDEPTH = 12  # maximum recursion depth
 LENGTHFACTOR = 120  # branch length factor
 VALIDARGS = False
 
+
 @atexit.register
 def cleanup():
     """
