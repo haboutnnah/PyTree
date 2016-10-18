@@ -33,7 +33,7 @@ VALIDARGS = False
 @atexit.register
 def cleanup():
     """
-    :rtype: void
+    :rtype: int
     """
     print("Stopping...")
     sys.exit
