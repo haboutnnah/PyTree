@@ -7,11 +7,13 @@ https://manmeetgill.com
 contact@manmeetgill.com
 https://github.com/tf2manu994/PyTree
 """
+import atexit
 import colorsys
 import math
 import sys
-import atexit
+
 from PIL import Image, ImageDraw
+
 __author__ = "Manmeet Gill"
 __contact__ = "contact@manmeetgill.com"
 __website__ = "https://manmeetgill.com"
