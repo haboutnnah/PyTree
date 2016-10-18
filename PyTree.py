@@ -39,7 +39,6 @@ def cleanup():
     :rtype: int
     """
     print("Stopping...")
-    sys.exit
 
 for argument in sys.argv[1:]:
     # Remove flag markers, we don't need to process those.
