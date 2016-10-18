@@ -144,3 +144,4 @@ tree(WIDTH / 2,
      MAXDEPTH)
 TREEFILE = TREEFILE.resize((1000, 1000), Image.ANTIALIAS)
 TREEFILE.save("PyTree.png", "PNG")
+print("Completed! Saved file PyTree.png in current working directory")
