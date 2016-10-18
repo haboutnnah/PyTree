@@ -10,6 +10,7 @@ https://github.com/tf2manu994/PyTree
 import colorsys
 import math
 import sys
+import atexit
 from PIL import Image, ImageDraw
 __author__ = "Manmeet Gill"
 __contact__ = "contact@manmeetgill.com"
@@ -30,6 +31,14 @@ FINALWIDTH = 1000   # the width for the final image
 MAXDEPTH = 12  # maximum recursion depth
 LENGTHFACTOR = 120  # branch length factor
 VALIDARGS = False
+
+@atexit.register
+def cleanup():
+    """
+    :rtype: void
+    """
+    print("Stopping...")
+    sys.exit
 
 for argument in sys.argv[1:]:
     # Remove flag markers, we don't need to process those.
