@@ -63,5 +63,8 @@ target/
 # Visual Studio Code
 .vscode**
 
+# VirtualEnv
+VirtualEnv**
+
 # Project exclusive files
 PyTree.png
