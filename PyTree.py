@@ -68,7 +68,7 @@ for argument in sys.argv[1:]:
         LENGTHFACTOR = int(argument[7:])
         print("Length  set to %s" % LENGTHFACTOR)
         VALIDARGS = True
-    elif argument.lower() == help:
+    elif argument.lower() == "help":
         print("Valid Flags - Description - Default")
         print("spread - How far the branches spread apart - 12")
         print("aafactor - The factor at which to render the file - 10")
