@@ -54,10 +54,12 @@ for argument in sys.argv[1:]:
         VALIDARGS = True
     elif argument[:6].lower() == "height":
         FINALHEIGHT = int(argument[7:])
+        HEIGHT = FINALHEIGHT * AAFACTOR  # Rendered size
         print("Height set to %s" % HEIGHT)
         VALIDARGS = True
     elif argument[:5].lower() == "width":
         FINALWIDTH = int(argument[6:])
+        WIDTH = FINALWIDTH * AAFACTOR  # Rendered size
         print("Width set to %s" % WIDTH)
         VALIDARGS = True
     elif argument[:5].lower() == "depth":
