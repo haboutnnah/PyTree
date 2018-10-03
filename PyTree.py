@@ -14,23 +14,23 @@ import sys
 
 from PIL import Image, ImageDraw
 
-__author__ = "Hannah Ivy"
-__contact__ = "contact@hannahi.com"
-__website__ = "https://hannahi.com"
-__script__ = "PyTree"
-__version__ = "v0.1"
-__git__ = "https://github.com/haboutnnah/PyTree"
+__author__ : str = "Hannah Ivy"
+__contact__ : str = "contact@hannahi.com"
+__website__ : str = "https://hannahi.com"
+__script__ : str = "PyTree"
+__version__ : str = "v0.1"
+__git__ : str = "https://github.com/haboutnnah/PyTree"
 
 # Set defaults
-SPREAD = 12  # how much branches spread apart
-AAFACTOR = 10  # How much bigger we render for anti-aliasing
-FINALHEIGHT = 1000  # the height for the final image
-FINALWIDTH = 1000   # the width for the final image
-WIDTH = FINALWIDTH * AAFACTOR  # Rendered size
-HEIGHT = FINALHEIGHT * AAFACTOR  # Rendered size
-MAXDEPTH = 12  # maximum recursion depth
-LENGTHFACTOR = 120  # branch length factor
-VALIDARGS = False
+SPREAD : int = 12  # how much branches spread apart
+AAFACTOR : int = 10  # How much bigger we render for anti-aliasing
+FINALHEIGHT : int = 1000  # the height for the final image
+FINALWIDTH : int = 1000   # the width for the final image
+WIDTH : int = FINALWIDTH * AAFACTOR  # Rendered size
+HEIGHT : int = FINALHEIGHT * AAFACTOR  # Rendered size
+MAXDEPTH : int = 12  # maximum recursion depth
+LENGTHFACTOR : int = 120  # branch length factor
+VALIDARGS : bool = False
 
 
 @atexit.register
