@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-PyTree v0.1 by Manmeet Gill
-© Manmeet Gill 2016
-https://manmeetgill.com
-contact@manmeetgill.com
-https://github.com/tf2manu994/PyTree
+PyTree v0.1 by Hannah Ivy
+© Hannah Ivy 2016
+https://HannahI.com
+contact@hannahi.com
+https://github.com/haboutnnah/PyTree
 """
 import atexit
 import colorsys
@@ -14,12 +14,12 @@ import sys
 
 from PIL import Image, ImageDraw
 
-__author__ = "Manmeet Gill"
-__contact__ = "contact@manmeetgill.com"
-__website__ = "https://manmeetgill.com"
-__script__ = "PyHDDKeepAlive"
+__author__ = "Hannah Ivy"
+__contact__ = "contact@hannahi.com"
+__website__ = "https://hannahi.com"
+__script__ = "PyTree"
 __version__ = "v0.1"
-__git__ = "https://github.com/tf2manu994/PyTree"
+__git__ = "https://github.com/haboutnnah/PyTree"
 
 # Set defaults
 SPREAD = 12  # how much branches spread apart
@@ -34,7 +34,7 @@ VALIDARGS = False
 
 
 @atexit.register
-def cleanup():
+def cleanup() -> int:
     """
     :rtype: int
     """
@@ -42,34 +42,34 @@ def cleanup():
 
 for argument in sys.argv[1:]:
     # Remove flag markers, we don't need to process those.
-    argument = argument.replace("-", "")
-    argument = argument.replace("/", "")
+    argument : str = argument.replace("-", "")
+    argument : str = argument.replace("/", "")
     if argument[:6].lower() == "spread":
-        SPREAD = int(argument[7:])
+        SPREAD : int = int(argument[7:])
         print("Spread set to %s" % SPREAD)
-        VALIDARGS = True
+        VALIDARGS : bool = True
     elif argument[:8].lower() == "aafactor":
-        AAFACTOR = int(argument[9:])
+        AAFACTOR : int = int(argument[9:])
         print("AA Factor set to %s" % AAFACTOR)
-        VALIDARGS = True
+        VALIDARGS : bool = True
     elif argument[:6].lower() == "height":
-        FINALHEIGHT = int(argument[7:])
-        HEIGHT = FINALHEIGHT * AAFACTOR  # Rendered size
+        FINALHEIGHT : int = int(argument[7:])
+        HEIGHT : int = FINALHEIGHT * AAFACTOR  # Rendered size
         print("Height set to %s" % HEIGHT)
-        VALIDARGS = True
+        VALIDARGS : bool = True
     elif argument[:5].lower() == "width":
-        FINALWIDTH = int(argument[6:])
-        WIDTH = FINALWIDTH * AAFACTOR  # Rendered size
+        FINALWIDTH : int = int(argument[6:])
+        WIDTH : int = FINALWIDTH * AAFACTOR  # Rendered size
         print("Width set to %s" % WIDTH)
-        VALIDARGS = True
+        VALIDARGS : bool = True
     elif argument[:5].lower() == "depth":
-        MAXDEPTH = int(argument[6:])
+        MAXDEPTH : int = int(argument[6:])
         print("Depth set to %s" % MAXDEPTH)
         VALIDARGS = True
     elif argument[:6].lower() == "length":
-        LENGTHFACTOR = int(argument[7:])
+        LENGTHFACTOR : int = int(argument[7:])
         print("Length  set to %s" % LENGTHFACTOR)
-        VALIDARGS = True
+        VALIDARGS : bool = True
     elif argument.lower() == "help":
         print("Valid Flags - Description - Default")
         print("spread - How far the branches spread apart - 12")
@@ -98,7 +98,7 @@ def tree(
         ystart: float,  # The y co-ordinate for the start of the line
         angle: int,  # the angle to branch out, in radians
         depth: int  # How far we have to go
-):
+) -> void:
 
     """
     :rtype: void
